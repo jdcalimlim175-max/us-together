@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Us Together ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="loginScreen">
+
+        <h1>Us Together 💗</h1>
+        <p>Our little space, just for us.</p>
+
+        <div class="login-box">
+
+            <h2>Welcome!</h2>
+
+            <input type="email" id="email" placeholder="Your email">
+
+            <input type="password" id="password" placeholder="Your password">
+
+            <button id="loginBtn">Log In</button>
+
+            <button id="signupBtn">Create Account</button>
+
+            <p id="authMessage"></p>
+
+        </div>
+    </div>
+
+
+    <!-- MAIN APP -->
+    <div id="appContent">
+
+        <!-- PROFILE SETUP -->
+        <section id="profileSetup" class="page hidden">
+
+            <div class="profile-box">
+
+                <h2>Create Your Profile 💗</h2>
+
+                <p>Let someone find you on Us Together!</p>
+
+                <label for="profilePicture">
+                    Choose a profile picture
+                </label>
+
+                <input
+                    type="file"
+                    id="profilePicture"
+                    accept="image/*"
+                >
+
+                <label for="username">
+                    Choose a unique username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Example: nathan123"
+                    maxlength="20"
+                >
+
+                <button id="saveProfileBtn">
+                    Create My Profile ♡
+                </button>
+
+                <p id="profileMessage"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">♡ Us Together</div>
+
+            <div class="status">
+                <span class="online-dot"></span>
+                Our little space
+            </div>
+
+        </header>
+
+
+        <main class="container">
+
+            <!-- WELCOME -->
+            <section class="welcome">
+
+                <h1>Hello, love! ♡</h1>
+
+                <p>A little place for our memories.</p>
+
+            </section>
+
+
+            <!-- RELATIONSHIP COUNTER -->
+            <section class="counter">
+
+                <h2>♡ Together Since ♡</h2>
+
+                <div id="days">0</div>
+
+                <p>Days of being together</p>
+
+            </section>
+
+
+            <!-- NAVIGATION -->
+            <section class="navigation">
+
+                <button onclick="showPage('chat')">
+                    💬 Messages
+                </button>
+
+                <button onclick="showPage('albums')">
+                    📸 Albums
+                </button>
+
+                <button onclick="showPage('memories')">
+                    💗 Memories
+                </button>
+
+                <button onclick="showPage('findPeople')">
+                    🔎 Find People
+                </button>
+
+            </section>
+
+
+            <!-- CHAT SECTION -->
+            <section id="chat" class="page">
+
+                <h2>Our Messages 💌</h2>
+
+                <div id="messages" class="messages">
+
+                    <p class="empty">
+                        Your conversations will appear here.
+                    </p>
+
+                </div>
+
+                <div class="chat-input">
+
+                    <input
+                        id="messageInput"
+                        type="text"
+                        placeholder="Write a message..."
+                    >
+
+                    <button onclick="sendMessage()">➤</button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ALBUMS SECTION -->
+            <section id="albums" class="page hidden">
+
+                <h2>Our Albums 📸</h2>
+
+                <p>All our favorite moments in one place.</p>
+
+                <button onclick="createAlbum()">
+                    + Create Album
+                </button>
+
+                <div id="albumList"></div>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                    multiple
+                >
+
+                <div id="photoGallery"></div>
+
+            </section>
+
+
+            <!-- MEMORIES SECTION -->
+            <section id="memories" class="page hidden">
+
+                <h2>Our Memories 💗</h2>
+
+                <p>Every picture tells a story.</p>
+
+                <p>More memories coming soon ♡</p>
+
+            </section>
+
+
+            <!-- FIND PEOPLE SECTION -->
+            <section id="findPeople" class="page hidden">
+
+                <h2>Find Someone 💗</h2>
+
+                <p>Search using their unique username.</p>
+
+                <input
+                    type="text"
+                    id="searchUsername"
+                    placeholder="Enter username..."
+                >
+
+                <button id="searchUserBtn">
+                    Search
+                </button>
+
+                <div id="searchResults"></div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+            Made with love ♡ Us Together
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>

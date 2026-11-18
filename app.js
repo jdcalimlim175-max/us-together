@@ -392,3 +392,17 @@ onAuthStateChanged(auth, async (user) => {
 window.showPage = showPage;
 window.sendMessage = sendMessage;
 window.createAlbum = createAlbum;
+
+#forgotPassword {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    color: #e75480;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#forgotPassword:hover {
+    text-decoration: underline;
+}
